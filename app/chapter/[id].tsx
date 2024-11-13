@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import dummy from "../../assets/dummy.json";
+import HeaderWithBack from "@/components/HeaderWithBack";
 
 type Subsection = {
   subsection_title: string;
@@ -29,13 +30,15 @@ export default function ChapterDetail() {
     return (
       <Pressable
         onPress={() => {
-          console.log(`Navigating with chapterId: ${chapterId}, index: ${index}`);
+          console.log(
+            `Navigating with chapterId: ${chapterId}, index: ${index}`
+          );
           router.push({
-            pathname: '/quotes/[chapterId]/[subsectionIndex]',
+            pathname: "/quotes/[chapterId]/[subsectionIndex]",
             params: {
               chapterId: chapterId,
-              subsectionIndex: index.toString()
-            }
+              subsectionIndex: index.toString(),
+            },
           });
         }}
         style={({ pressed }) => [

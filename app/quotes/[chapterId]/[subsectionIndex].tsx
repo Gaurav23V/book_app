@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View, FlatList, Text, ListRenderItem } from "react-native";
 import { useLocalSearchParams } from "expo-router";
 import dummy from "../../../assets/dummy.json";
+import HeaderWithBack from "@/components/HeaderWithBack";
 
 export default function QuotesScreen() {
   const params = useLocalSearchParams();
